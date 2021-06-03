@@ -110,7 +110,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/_gps/lib/hw/gps.default.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/gps.default.so \
     vendor/samsung/gtaxlwifi/proprietary/_gps/vendor/bin/hw/gpsd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/gpsd
 
-# Sensors - from T580XXS5CTK1/T580XXS5CTD1
+# Sensors - from P580ZSS1CTI1
 PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/_sensors/vendor/lib/hw/sensors.universal7870.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.universal7870.so
 
