@@ -17,7 +17,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/gtaxlwifi
 
-# Firmware - from T585XXS6CTJ7
+# WiFi firmware - partly from A720SKSU5CTL2, partly from T585XXS6CTJ7
+# bdwlan30.bin and utfbd30.bin are as in the T585XXS6CTJ7 firmware, and are also copies of bdwlan32.bin
+# and utfbd32.bin as in the A720SKSU5CTL2 firmware respectively. With bdwlan30.bin and utfbd30.bin from
+# the A720SKSU5CTL2 firmware, WiFi regulatory domain selection doesn't work properly.
 PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/etc/firmware/bdwlan30.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/bdwlan30.bin \
     vendor/samsung/gtaxlwifi/proprietary/etc/firmware/bdwlan32.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/bdwlan32.bin \
@@ -27,12 +30,18 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/etc/firmware/qwlan30_ibss.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/qwlan30_ibss.bin \
     vendor/samsung/gtaxlwifi/proprietary/etc/firmware/utf30.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/utf30.bin \
     vendor/samsung/gtaxlwifi/proprietary/etc/firmware/utfbd30.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/utfbd30.bin \
-    vendor/samsung/gtaxlwifi/proprietary/etc/firmware/utfbd32.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/utfbd32.bin \
-    vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/fimc_is_lib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fimc_is_lib.bin \
-    vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/setfile_4h5yc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_4h5yc.bin \
-    vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/setfile_sr259.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_sr259.bin \
+    vendor/samsung/gtaxlwifi/proprietary/etc/firmware/utfbd32.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/utfbd32.bin
+
+# Bluetooth firmware - from A720SKSU5CTL2
+PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/nvm_tlv_tf_1.1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nvm_tlv_tf_1.1.bin \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/rampatch_tlv_tf_1.1.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/rampatch_tlv_tf_1.1.tlv
+
+# Camera firmware - from T585XXS6CTJ7
+PRODUCT_COPY_FILES += \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/fimc_is_lib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fimc_is_lib.bin \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/setfile_4h5yc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_4h5yc.bin \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/setfile_sr259.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_sr259.bin
 
 # MFC (Multi Format Codec) firmware - from M105FDDU3CTK3
 # Version information: "MFC v10.11, F/W: 19yy, 02mm, 08dd"
