@@ -103,7 +103,7 @@ PRODUCT_COPY_FILES += \
 # Modifications made to gpsd to get it to work:
 #  * SSLv3_client_method has been replaced with SSLv23_method:
 #  $ sed -i "s/SSLv3_client_method/SSLv23_method\x00\x00\x00\x00\x00\x00/" gpsd
-#  * The android.hidl.base@1.0 dependancy has been removed using patchelf:
+#  * The android.hidl.base@1.0 dependency has been removed using patchelf:
 #  $ patchelf --remove-needed android.hidl.base@1.0.so gpsd
 # No modifications were made to gps.default.so.
 PRODUCT_COPY_FILES += \
