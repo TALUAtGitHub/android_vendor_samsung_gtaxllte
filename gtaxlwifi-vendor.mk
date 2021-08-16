@@ -107,12 +107,12 @@ PRODUCT_COPY_FILES += \
 #  $ patchelf --remove-needed android.hidl.base@1.0.so gpsd
 # No modifications were made to gps.default.so.
 PRODUCT_COPY_FILES += \
-    vendor/samsung/gtaxlwifi/proprietary/_gps/lib/hw/gps.default.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/gps.default.so \
-    vendor/samsung/gtaxlwifi/proprietary/_gps/vendor/bin/hw/gpsd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/gpsd
+    vendor/samsung/gtaxlwifi/proprietary/lib/hw/gps.default.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/gps.default.so \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/bin/hw/gpsd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/gpsd
 
 # Sensors - from P580ZSS1CTI1
 PRODUCT_COPY_FILES += \
-    vendor/samsung/gtaxlwifi/proprietary/_sensors/vendor/lib/hw/sensors.universal7870.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.universal7870.so
+    vendor/samsung/gtaxlwifi/proprietary/vendor/lib/hw/sensors.universal7870.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.universal7870.so
 
 # Samsung stock audio
 PRODUCT_COPY_FILES += \
