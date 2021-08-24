@@ -107,7 +107,7 @@ PRODUCT_COPY_FILES += \
 #  $ patchelf --remove-needed android.hidl.base@1.0.so gpsd
 # No modifications were made to gps.default.so.
 PRODUCT_COPY_FILES += \
-    vendor/samsung/gtaxlwifi/proprietary/lib/hw/gps.default.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/gps.default.so \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/lib/hw/gps.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gps.default.so \
     vendor/samsung/gtaxlwifi/proprietary/vendor/bin/hw/gpsd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/gpsd
 
 # Sensors - from P580ZSS1CTI1
